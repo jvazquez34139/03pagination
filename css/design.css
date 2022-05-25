@@ -1,0 +1,267 @@
+body{
+  background-image: linear-gradient(to bottom right, #00e8e8, #00b3b3);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: fill;
+  font-family: Helvetica, sans-serif;
+  color: #222;
+}
+
+.page{
+  margin: 50px auto;
+  width: 70%;
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 50px;
+}
+
+#selected-student{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom right, #0185858c, #004b4b8c);
+}
+
+.card{
+  position: relative;
+  width: 40%;
+  max-width: 500px;
+  max-height: 100vh;
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease-in-out;
+  padding: 125px 0 0 0;
+  text-align: center;
+}
+.card .avatar{
+  display: block;
+  width: 200px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.card .name{
+  display: block;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 20px auto 0 auto;
+}
+.card .email{
+  display: block;
+  font-size: 20px;
+  margin: 3px auto 0 auto;
+}
+.card .phone{
+  display: block;
+  font-size: 20px;
+  margin: 3px 0 0 auto;
+}
+.card .details{
+  display: block;
+  max-width:80%;
+  margin: 70px auto;
+  text-align: left;
+}
+.card .details tr td:first-of-type{
+  display: block;
+  font-size: 18px;
+  width: 100px;
+}
+.card .close{
+  width: 100%;
+  background-color: #ff6f6f;
+  padding: 60px 0;
+  border-radius:0 0 20px 20px;
+}
+.card .close:hover{
+  background-color: #ff4d4d;
+  transition: 0.2s;
+}
+.card .close:active{
+  background-color: #ff1a1a;
+  transition: 0s;
+}
+.page-header{
+  margin-bottom: 20px;
+}
+.page-header h2{
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #555;
+}
+
+.page-header .student-search input{
+  border-radius: 5px;
+  border: 1px solid #eaeaea;
+  padding: 8px 15px;
+  font-size: 14px;
+}
+
+.page-header .student-search button{
+  border-radius: 5px;
+  border: 1px solid #eaeaea;
+  padding: 8px 15px;
+  font-size: 14px;
+  background-color: #4ba6c3;
+  color: #fff
+}
+
+.student-list{
+  display: flex;
+  flex-direction: column;
+}
+
+.student-item{
+  margin: 0 0 20px 0;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid #eaeaea;
+  display: flex;
+  flex-direction: row;
+}
+
+.student-details{
+  width: 36%;
+  display: flex;
+  flex-direction: row;
+  margin-right: auto;
+}
+
+.student-details .avatar{
+  width: 40px;
+  height: auto;
+  border-radius: 5px;
+  margin-right: 14px
+}
+
+.student-details h3{
+  margin: 4px 0 2px 0;
+  font-weight: bold;
+  color: #4ba6c3;
+}
+
+.student-details .email{
+  color: #888;
+  font-size: 14px;
+}
+
+
+.joined-details{
+  width: auto;
+  margin-left: auto;
+  text-align: right;
+}
+
+.joined-details .date{
+  margin-top: 15px;
+  display: block;
+  font-size: 14px;
+  color: #999;
+  height: 1rem;
+  /* make content 7 characters long */
+  overflow: hidden;
+  white-space: nowrap;
+}
+.joined-details .date::before{
+  content: "Joined: ";
+  font-weight: bold;
+  color: #4ba6c3;
+}
+
+.student-item:last-child{
+  margin: 0;
+  padding: 0;
+  border-bottom: none;
+}
+
+.pagination{
+  margin: 40px 0 0 0;
+  text-align: center;
+}
+ 
+.pagination li{
+  display: inline;
+}
+
+.pagination li a{
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  padding: 3px 8px;
+  text-decoration: none;
+  color: #4ba6c3;
+}
+
+.pagination li a.active,
+.pagination li a:hover{
+  background-color: #4ba6c3;
+  color: #fff;
+}
+.more{
+  margin: 0 0 0 1px;
+  width: 70px;
+  height: auto;
+  outline: none;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #4ba6c3;
+  font-size: 14px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+.more:hover{
+  background-color: #4ba6c3;
+  color: #444;
+  transition: 0.2s;
+}
+.more:active{
+  background-color: #187390;
+  color: #fff;
+  transition: 0s;
+}
+
+@media screen and (max-width: 800px){
+  .page{
+  }
+  .student-item{
+    flex-direction: column;
+  }
+  .student-details{
+    width: 100%;
+    /* flex-direction: column; */
+  }
+  .student-details .avatar{
+    margin:0 40px 0 0;
+  }
+  .student-details h3{
+    margin: 0 0 10px 0;
+  }
+  .student-details .email{
+    margin: 0 0 10px 0;
+  }
+  .joined-details{
+    display: none;
+  }
+
+  .pagination{
+    margin: 20px 0 0 0;
+  }
+  .more{
+    margin: 5px 0 0 0;
+    width: 100%;
+    height: auto;
+    outline: none;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #4ba6c3;
+    font-size: 14px;
+    padding: 8px 15px;
+    cursor: pointer;
+  }
+}
