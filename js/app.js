@@ -13,6 +13,8 @@ fetch('https://randomuser.me/api/?results=52')
       }
     }
     paginate($('.student-item').length);
+    $($(".pagination li a")[0]).addClass('active')
+    
   })
   .then(() => {
     $modal = $('#selected-student');
@@ -36,7 +38,7 @@ fetch('https://randomuser.me/api/?results=52')
         $modal.append($(createMoreCard(moreData)));
       }
       $modal.on('click', e => {
-        if(e.target.className == 'close') {
+        if(e.target.className == 'close'|| e.target.id == 'selected-student') {
           $modal.hide();
           $modal.empty();
         }
